@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Low Cibil Finance Solutions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    * {
+        box-sizing: border-box;
+        font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #7b1f1f, #c0392b);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .card {
+        background: #ffffff;
+        width: 100%;
+        max-width: 430px;
+        padding: 25px;
+        border-radius: 14px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    }
+
+    .card h1 {
+        text-align: center;
+        color: #7b1f1f;
+        margin-bottom: 5px;
+        font-size: 22px;
+        font-weight: 800;
+    }
+
+    .subtitle {
+        text-align: center;
+        color: #555;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-size: 14px;
+        font-weight: 600;
+        margin-top: 12px;
+        display: block;
+        color: #333;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+    }
+
+    input:focus, select:focus {
+        outline: none;
+        border-color: #c0392b;
+    }
+
+    .file-note {
+        font-size: 12px;
+        color: #666;
+        margin-top: 3px;
+    }
+
+    button {
+        margin-top: 20px;
+        width: 100%;
+        padding: 12px;
+        background: linear-gradient(135deg, #7b1f1f, #c0392b);
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        opacity: 0.95;
+    }
+
+    .success-message {
+        display: none;
+        text-align: center;
+        padding: 20px;
+        font-size: 16px;
+        color: #2c7a2c;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <h1>LOW CIBIL FINANCE SOLUTIONS</h1>
+    <div class="subtitle">Fill the form below</div>
+
+    <form
+      id="loanForm"
+      action="/submit"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+
+        <label>Full Name</label>
+        <input type="text" name="name" required>
+
+        <label>Mobile Number</label>
+        <input type="tel" name="mobile" pattern="[0-9]{10}" placeholder="10-digit mobile number" required>
+
+        <label>Date of Birth</label>
+        <input type="date" name="dob" required>
+
+        <label>Employment Type</label>
+        <select name="employment" required>
+            <option value="">Select</option>
+            <option value="Salaried">Salaried</option>
+            <option value="Self Employed">Self Employed</option>
+        </select>
+
+        <label>Net Monthly Income (₹)</label>
+        <input type="number" name="income" required>
+
+        <label>PAN Card</label>
+        <input type="file" name="pan" accept="image/*,.pdf" required>
+        <div class="file-note">Clear image or PDF</div>
+
+        <label>Bank Statement (Last 1 Month)</label>
+        <input type="file" name="bank" accept="image/*,.pdf" required>
+        <div class="file-note">PDF or image accepted</div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</div>
+
+
+</body>
+</html>
